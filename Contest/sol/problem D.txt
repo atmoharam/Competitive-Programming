@@ -1,0 +1,58 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+#define abu {ios_base::sync_with_stdio(false);}
+#define ahmed {cin.tie(NULL);}
+#define getunique(v) {sort(v.begin(), v.end()); v.erase(unique(v.begin(), v.end()), v.end());}
+
+typedef long long ll;
+typedef long double lld;
+typedef unsigned long long ull;
+
+void usaco(string filename) {
+    // #pragma message("be careful, freopen may be wrong")
+    freopen((filename + ".in").c_str(), "r", stdin);
+    freopen((filename + ".out").c_str(), "w", stdout);
+}
+
+// #include <atcoder/all>
+// using namespace atcoder;
+
+const lld pi = 3.14159265358979323846;
+const ll INF = 1e18 ;
+// const ll mod = 1000000007;
+// const ll mod = 998244353;
+
+ll n, m, k, q, l , w, r, x, y, z;
+const ll template_array_size = 1e6 + 4265;
+ll a[template_array_size];
+ll b[template_array_size];
+string s, t;
+ll ans = 0;
+
+void solve(int tc = 0) {
+    int digits[11] = { 6 , 2 , 5 , 5 , 4 , 5 , 6 , 3 , 7 , 6};
+    cin>>s;
+    for(char x : s)
+    {
+        ans += ( digits[x - '0']);
+    }
+    cout<<ans<<endl;
+}
+
+int main() {
+    #ifdef abu_ahmed_clock
+        auto begin = std::chrono::high_resolution_clock::now();
+    #endif
+    abu ahmed
+    // freopen("tc.cpp", "r", stdin);
+    int tc = 1;
+    //cin>>tc;
+    for (int tu = 0; tu < tc; tu++) { solve(tu); }
+
+    #ifdef abu_ahmed_local
+            auto end = std::chrono::high_resolution_clock::now();
+		    cout << setprecision(4) << fixed;
+            //cout << "Execution time: " << std::chrono::duration_cast<std::chrono::duration<double>>(end - begin).count() << " seconds" << endl;
+    #endif
+}
