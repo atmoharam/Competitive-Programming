@@ -1,0 +1,36 @@
+#include <iostream>
+#include <bits/stdc++.h>
+const int Mod = 1, N = 1e5+1;
+using namespace std;
+#define ll long long
+#define int  ll
+#define ulli unsigned long long int
+#define in(arr, n) for(int i = 0 ; i<(n)  ; i++) {cin>>(arr)[i];}
+#define MOHARM ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+const int INF = 1e9 + 100;
+double pi = 3.1415926;
+signed main() {
+    int n ;
+    cin>>n ;
+    pair<int,int> index ;
+    pair<int,int> points[n];
+    for (int i = 0; i < n; ++i) {
+        cin>>points[i].first>>points[i].second;
+    }
+    int mx = 0;
+    for (int i = 0; i <n ; ++i) {
+        for (int j = 0; j <n ; ++j) {
+            int distance =
+                    (points[i].first - points[j].first) * (points[i].first - points[j].first)
+            +
+                    (points[i].second - points[j].second) * (points[i].second - points[j].second);
+            if(distance>mx)
+            {
+                mx = distance;
+                index.first = i ;
+                index.second = j;
+            }
+        }
+    }
+    cout<<index.first<<' '<<index.second<<endl;
+}
