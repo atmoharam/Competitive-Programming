@@ -1,0 +1,20 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define IO {ios::sync_with_stdio(0); cin.tie(0);};
+const ll template_array_size = 1e6 + 4265;
+ll factorial(ll n){
+    if(n == 1){return 1 ;}
+    // recursive calling F(n) = ?
+    cout << "go to calculate " << n <<'*' << "factorial("<<n-1<<") \n";
+    ll x = factorial(n-1);
+    // back tracking F(n) = value
+    cout << "back from"<< "factorial("<<n-1<<") with value "<< x <<  "\n";
+    return n * x ;
+}
+signed main() {
+    IO
+    cout << factorial(5) ;
+    return 0 ;
+}
