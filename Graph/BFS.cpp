@@ -37,7 +37,7 @@ signed main() {
         q.pop() ;
         for(ll child : Graph[node]){
             if(!visited[child]){
-                visited[node] = true;
+                visited[child] = true;
                 q.push(child);
                 distancee[child] = distancee[node] + 1 ;
                 parent[child] = node ;
